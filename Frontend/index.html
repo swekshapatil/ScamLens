@@ -1,0 +1,1725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="ScamLens — Analyze suspicious messages, URLs and offers for scam and phishing risks."
+    />
+
+    <title>ScamLens — Security Intelligence</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+      <div class="ambient-light light-1"></div>
+      <div class="ambient-light light-2"></div>
+      <div class="ambient-light light-3"></div>
+
+      <div class="grid"></div>
+
+      <div class="noise"></div>
+
+      <div id="particles"></div>
+    </div>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="#" class="brand">
+          <div class="brand-symbol">
+            <svg viewBox="0 0 50 50">
+              <path
+                d="M25 4
+                               L43 11
+                               V24
+                               C43 35 36 42 25 46
+                               C14 42 7 35 7 24
+                               V11 Z"
+              />
+
+              <path
+                d="M25 13
+                               L34 17
+                               V25
+                               C34 30 30 34 25 36
+                               C20 34 16 30 16 25
+                               V17 Z"
+              />
+            </svg>
+          </div>
+
+          <div class="brand-name"><span>Scam</span>Lens</div>
+        </a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#analyzer" class="nav-link active"> Analyzer </a>
+
+        <a href="#dashboard" class="nav-link"> Intelligence </a>
+
+        <a href="#how-it-works" class="nav-link"> How it works </a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="system-status">
+          <span class="status-pulse"></span>
+
+          <span>SYSTEM ONLINE</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+      <!-- =================================================
+             HERO
+        ================================================== -->
+
+      <section class="hero">
+        <div class="hero-container">
+          <!-- HERO TEXT -->
+
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-pulse"></span>
+
+              CYBERSECURITY INTELLIGENCE
+            </div>
+
+            <h1>
+              Detect threats
+              <br />
+
+              <span>before they reach you.</span>
+            </h1>
+
+            <p class="hero-description">
+              ScamLens analyzes suspicious messages, emails, URLs and offers to
+              identify scam patterns and explain the risks behind them.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#analyzer" class="btn-primary">
+                <span class="btn-shine"></span>
+
+                Start Analysis
+
+                <span class="arrow">→</span>
+              </a>
+
+              <a href="#how-it-works" class="btn-secondary">
+                Explore Scanner
+
+                <span>↗</span>
+              </a>
+            </div>
+
+            <!-- HERO FEATURES -->
+
+            <div class="hero-features">
+              <div class="hero-feature">
+                <span class="check">✓</span>
+
+                Explainable detection
+              </div>
+
+              <div class="hero-feature">
+                <span class="check">✓</span>
+
+                Rule-based analysis
+              </div>
+
+              <div class="hero-feature">
+                <span class="check">✓</span>
+
+                Privacy focused
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     3D SECURITY CORE
+                ================================================== -->
+
+          <div class="hero-visual">
+            <div class="visual-grid"></div>
+
+            <!-- ORBIT 1 -->
+
+            <div class="orbit orbit-1">
+              <div class="orbit-dot"></div>
+            </div>
+
+            <!-- ORBIT 2 -->
+
+            <div class="orbit orbit-2">
+              <div class="orbit-dot"></div>
+            </div>
+
+            <!-- ORBIT 3 -->
+
+            <div class="orbit orbit-3">
+              <div class="orbit-dot"></div>
+            </div>
+
+            <!-- MAIN GLOW -->
+
+            <div class="core-glow"></div>
+
+            <!-- 3D SHIELD -->
+
+            <div class="shield-container">
+              <div class="shield-shadow"></div>
+
+              <div class="shield">
+                <div class="shield-back"></div>
+
+                <div class="shield-middle"></div>
+
+                <div class="shield-front">
+                  <svg class="shield-svg" viewBox="0 0 300 340">
+                    <defs>
+                      <linearGradient
+                        id="shieldGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="#bffff7" />
+
+                        <stop offset="45%" stop-color="#63e8d8" />
+
+                        <stop offset="100%" stop-color="#299f9a" />
+                      </linearGradient>
+
+                      <filter id="shieldGlow">
+                        <feGaussianBlur stdDeviation="8" result="blur" />
+
+                        <feMerge>
+                          <feMergeNode in="blur" />
+
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+
+                    <!-- Outer Shield -->
+
+                    <path
+                      d="M150 12
+                                           L276 58
+                                           V153
+                                           C276 234 225 295 150 328
+                                           C75 295 24 234 24 153
+                                           V58 Z"
+                      fill="rgba(72,226,211,0.08)"
+                      stroke="url(#shieldGradient)"
+                      stroke-width="3"
+                      filter="url(#shieldGlow)"
+                    />
+
+                    <!-- Inner Shield -->
+
+                    <path
+                      d="M150 48
+                                           L240 80
+                                           V153
+                                           C240 211 205 257 150 285
+                                           C95 257 60 211 60 153
+                                           V80 Z"
+                      fill="rgba(71,224,210,0.08)"
+                      stroke="rgba(157,255,244,0.55)"
+                      stroke-width="2"
+                    />
+
+                    <!-- Center Symbol -->
+
+                    <path
+                      d="M150 102
+                                           L194 120
+                                           V159
+                                           C194 184 176 203 150 215
+                                           C124 203 106 184 106 159
+                                           V120 Z"
+                      fill="rgba(102,239,224,0.15)"
+                      stroke="#8ffff3"
+                      stroke-width="3"
+                    />
+
+                    <!-- Check -->
+
+                    <path
+                      d="M125 158
+                                           L143 176
+                                           L178 139"
+                      fill="none"
+                      stroke="#d9fffa"
+                      stroke-width="7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <!-- SHIELD SCAN -->
+
+                  <div class="shield-scan"></div>
+                </div>
+              </div>
+
+              <!-- CORE -->
+
+              <div class="shield-core">
+                <span></span>
+              </div>
+            </div>
+
+            <!-- =================================================
+                         FLOATING TELEMETRY CARDS
+                    ================================================== -->
+
+            <div class="telemetry-card telemetry-left">
+              <div class="telemetry-icon threat">!</div>
+
+              <div class="telemetry-data">
+                <span> THREATS ANALYZED </span>
+
+                <strong> 249 </strong>
+
+                <small> +12.8% </small>
+              </div>
+
+              <div class="mini-chart">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="telemetry-card telemetry-right">
+              <div class="telemetry-icon secure">✓</div>
+
+              <div class="telemetry-data">
+                <span> PROTECTION SCORE </span>
+
+                <strong> 94.8 </strong>
+
+                <small> SECURE </small>
+              </div>
+
+              <div class="score-ring">
+                <div>94%</div>
+              </div>
+            </div>
+
+            <div class="telemetry-card telemetry-bottom">
+              <div class="signal-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="telemetry-data">
+                <span> DETECTION ENGINE </span>
+
+                <strong> ACTIVE </strong>
+              </div>
+
+              <div class="live-indicator">
+                <span></span>
+
+                LIVE
+              </div>
+            </div>
+
+            <!-- SCANNING LABEL -->
+
+            <div class="scan-label">
+              <span class="scan-line"></span>
+
+              SCANNING THREAT SPACE
+            </div>
+          </div>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+
+        <div class="scroll-indicator">
+          <span>SCROLL TO ANALYZE</span>
+
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             ANALYZER SECTION
+        ================================================== -->
+
+      <section class="analyzer-section" id="analyzer">
+        <div class="section-container">
+          <!-- SECTION HEADER -->
+
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span></span>
+
+                THREAT ANALYSIS ENGINE
+              </div>
+
+              <h2>Inspect suspicious content.</h2>
+
+              <p>
+                Give ScamLens something suspicious. We'll break down the warning
+                signs.
+              </p>
+            </div>
+
+            <div class="engine-status">
+              <div class="engine-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div>
+                <strong> ENGINE READY </strong>
+
+                <small> v1.0 • RULE BASED </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     ANALYZER CONSOLE
+                ================================================== -->
+
+          <div class="analyzer-console">
+            <!-- CONSOLE HEADER -->
+
+            <div class="console-header">
+              <div class="console-brand">
+                <div class="console-symbol">◈</div>
+
+                <div>
+                  <strong> ScamLens Scanner </strong>
+
+                  <span> THREAT ANALYSIS CONSOLE </span>
+                </div>
+              </div>
+
+              <div class="console-controls">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- INPUT TYPE TABS -->
+
+            <div class="input-types">
+              <button class="input-type active" data-type="message">
+                <span>01</span>
+
+                Message
+              </button>
+
+              <button class="input-type" data-type="whatsapp">
+                <span>02</span>
+
+                WhatsApp
+              </button>
+
+              <button class="input-type" data-type="email">
+                <span>03</span>
+
+                Email
+              </button>
+
+              <button class="input-type" data-type="job">
+                <span>04</span>
+
+                Job Offer
+              </button>
+
+              <button class="input-type" data-type="url">
+                <span>05</span>
+
+                URL
+              </button>
+            </div>
+
+            <!-- INPUT AREA -->
+
+            <div class="scanner-input">
+              <div class="input-header">
+                <div class="input-title">
+                  <span class="terminal"> &gt;_ </span>
+
+                  <span> INPUT CONTENT </span>
+                </div>
+
+                <div class="input-security">
+                  <span></span>
+
+                  ENCRYPTED SESSION
+                </div>
+              </div>
+
+              <div class="textarea-wrapper">
+                <div class="textarea-lines"></div>
+
+                <textarea
+                  id="messageInput"
+                  maxlength="5000"
+                  spellcheck="false"
+                  placeholder="Paste a suspicious message, email, job offer or URL here..."
+                ></textarea>
+
+                <div class="textarea-corner top-left"></div>
+                <div class="textarea-corner top-right"></div>
+                <div class="textarea-corner bottom-left"></div>
+                <div class="textarea-corner bottom-right"></div>
+              </div>
+
+              <!-- INPUT FOOTER -->
+
+              <div class="input-footer">
+                <div class="input-meta">
+                  <span id="characterCount"> 0 characters </span>
+
+                  <span class="meta-divider"> / </span>
+
+                  <span> 5000 </span>
+                </div>
+
+                <div class="input-hint">
+                  Press
+                  <kbd>CTRL</kbd>
+                  +
+                  <kbd>ENTER</kbd>
+                  to scan
+                </div>
+              </div>
+            </div>
+
+            <!-- SCAN ACTION -->
+
+            <div class="scan-action">
+              <div class="scan-capabilities">
+                <div>
+                  <span class="cap-dot active"></span>
+
+                  Pattern Engine
+                </div>
+
+                <div>
+                  <span class="cap-dot active"></span>
+
+                  Risk Scoring
+                </div>
+
+                <div>
+                  <span class="cap-dot active"></span>
+
+                  Explainable AI
+                </div>
+              </div>
+
+              <button id="analyzeBtn" class="analyze-button">
+                <span class="button-glow"></span>
+
+                <span class="button-symbol"> ◈ </span>
+
+                <span class="button-text"> ANALYZE THREAT </span>
+
+                <span class="button-arrow"> → </span>
+              </button>
+            </div>
+
+            <!-- CONSOLE FOOTER -->
+
+            <div class="console-footer">
+              <div>
+                <span class="pulse-dot"></span>
+
+                SCAMLENS DETECTION SYSTEM
+              </div>
+
+              <div>
+                ANALYSIS MODE:
+                <strong> LOCAL </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             RESULT
+        ================================================== -->
+
+      <section class="result-section" id="resultSection">
+        <div class="section-container">
+          <div class="result-placeholder">
+            <div class="result-visual">
+              <div class="result-ring ring-a"></div>
+
+              <div class="result-ring ring-b"></div>
+
+              <div class="result-center">◈</div>
+            </div>
+
+            <div class="section-kicker">
+              <span></span>
+
+              ANALYSIS OUTPUT
+            </div>
+
+            <h3>Waiting for threat analysis</h3>
+
+            <p>
+              Your risk score, detected patterns and explanations will appear
+              here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             INTELLIGENCE DASHBOARD
+        ================================================== -->
+
+      <section class="dashboard-section" id="dashboard">
+        <div class="section-container">
+          <div class="section-header centered">
+            <div>
+              <div class="section-kicker">
+                <span></span>
+
+                SECURITY INTELLIGENCE
+              </div>
+
+              <h2>Threat visibility at a glance.</h2>
+
+              <p>Track what ScamLens detects across your analysis sessions.</p>
+            </div>
+          </div>
+
+          <!-- STAT CARDS -->
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-top">
+                <span> TOTAL ANALYSES </span>
+
+                <div class="stat-icon">◈</div>
+              </div>
+
+              <strong class="stat-number" data-value="0"> 0 </strong>
+
+              <div class="stat-bottom">
+                <span> Messages scanned </span>
+
+                <span class="stat-live"> LIVE </span>
+              </div>
+            </div>
+
+            <div class="stat-card danger">
+              <div class="stat-top">
+                <span> HIGH RISK </span>
+
+                <div class="stat-icon">!</div>
+              </div>
+
+              <strong class="stat-number" data-value="0"> 0 </strong>
+
+              <div class="stat-bottom">
+                <span> Threats detected </span>
+
+                <span> MONITOR </span>
+              </div>
+            </div>
+
+            <div class="stat-card safe">
+              <div class="stat-top">
+                <span> LOW RISK </span>
+
+                <div class="stat-icon">✓</div>
+              </div>
+
+              <strong class="stat-number" data-value="0"> 0 </strong>
+
+              <div class="stat-bottom">
+                <span> Relatively safe </span>
+
+                <span> SECURE </span>
+              </div>
+            </div>
+
+            <div class="stat-card blue">
+              <div class="stat-top">
+                <span> DETECTION RULES </span>
+
+                <div class="stat-icon">◇</div>
+              </div>
+
+              <strong class="stat-number"> 12 </strong>
+
+              <div class="stat-bottom">
+                <span> Active patterns </span>
+
+                <span> v1.0 </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTELLIGENCE PANELS -->
+
+          <div class="intelligence-grid">
+           
+           
+           <!-- RISK DISTRIBUTION -->
+
+<div class="intelligence-card">
+
+    <div class="card-heading">
+
+        <div>
+            <span>RISK DISTRIBUTION</span>
+
+            <h3>Analysis overview</h3>
+        </div>
+
+        <span class="card-status">LIVE</span>
+
+    </div>
+
+
+    <div class="distribution">
+
+        <!-- DONUT -->
+
+        <div class="donut-chart">
+
+            <div class="donut-inner">
+
+                <strong>—</strong>
+
+                <span>ANALYSES</span>
+
+            </div>
+
+
+            <div class="donut-tooltip">
+
+                <strong>Low Risk</strong>
+
+                <span>0%</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEGEND -->
+
+        <div class="legend">
+
+            <div>
+
+                <span class="legend-dot low"></span>
+
+                <span>Low Risk</span>
+
+                <strong>0%</strong>
+
+            </div>
+
+
+            <div>
+
+                <span class="legend-dot medium"></span>
+
+                <span>Medium Risk</span>
+
+                <strong>0%</strong>
+
+            </div>
+
+
+            <div>
+
+                <span class="legend-dot high"></span>
+
+                <span>High Risk</span>
+
+                <strong>0%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+            <!-- DETECTION ACTIVITY -->
+
+            <div class="intelligence-card">
+              <div class="card-heading">
+                <div>
+                  <span> DETECTION ACTIVITY </span>
+
+                  <h3>Threat patterns</h3>
+                </div>
+
+                <span> LAST 7 SESSIONS </span>
+              </div>
+
+              <div class="chart-bars">
+
+    <div data-day="Mon"></div>
+    <div data-day="Tue"></div>
+    <div data-day="Wed"></div>
+    <div data-day="Thu"></div>
+    <div data-day="Fri"></div>
+    <div data-day="Sat"></div>
+    <div data-day="Sun"></div>
+
+</div>
+
+              <div class="chart-labels">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+              </div>
+            </div>
+
+
+<!-- MOST COMMON SCAM -->
+
+<div class="intelligence-card">
+
+    <div class="card-heading">
+
+        <div>
+            <span>MOST COMMON SCAMS</span>
+            <h3>Category intelligence</h3>
+        </div>
+
+        <span class="card-status">
+            LIVE
+        </span>
+
+    </div>
+
+
+    <!-- SCAM CATEGORY LIST -->
+
+    <div
+        id="scamCategoryList"
+        class="scam-category-list"
+    >
+
+        <!-- Banking / Phishing -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ◈
+                </span>
+
+                <div>
+
+                    <strong>
+                        Banking / Phishing Scam
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <!-- Job / Internship -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ◇
+                </span>
+
+                <div>
+
+                    <strong>
+                        Job / Internship Scam
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <!-- Prize / Lottery -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Prize / Lottery Scam
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <!-- Account Takeover -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ⬡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Account Takeover / Phishing
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <!-- Payment Scam -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ◉
+                </span>
+
+                <div>
+
+                    <strong>
+                        Payment Scam
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+
+        <!-- General Suspicious Activity -->
+
+        <div class="scam-category-row">
+
+            <div class="scam-category-info">
+
+                <span class="scam-category-icon">
+                    ○
+                </span>
+
+                <div>
+
+                    <strong>
+                        General Suspicious Activity
+                    </strong>
+
+                    <span>
+                        0 scans
+                    </span>
+
+                </div>
+
+            </div>
+
+            <strong class="scam-category-count">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="common-scam-note">
+
+        Based on your scan history
+
+    </div>
+</div>
+<!-- RECENT SCAN HISTORY -->
+
+<div class="intelligence-card scan-history-card">
+
+    <div class="card-heading">
+
+        <div>
+            <span>SCAN HISTORY</span>
+
+            <h3>Recent analyses</h3>
+        </div>
+
+        <span class="card-status">
+            DATABASE
+        </span>
+
+    </div>
+
+
+    <div
+        id="scanHistoryList"
+        class="scan-history-list"
+    >
+
+        <div class="history-loading">
+            Loading scan history...
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+      <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+      <section class="how-section" id="how-it-works">
+        <div class="section-container">
+          <div class="section-header centered">
+            <div>
+              <div class="section-kicker">
+                <span></span>
+
+                DETECTION PIPELINE
+              </div>
+
+              <h2>From suspicious message to clear answer.</h2>
+
+              <p>
+                ScamLens turns complicated warning signs into information anyone
+                can understand.
+              </p>
+            </div>
+          </div>
+
+          <div class="pipeline">
+            <!-- STEP 1 -->
+
+            <div class="pipeline-step">
+              <div class="step-number">01</div>
+
+              <div class="step-icon-large">
+                <div class="icon-box">↓</div>
+              </div>
+
+              <h3>Input</h3>
+
+              <p>Paste a suspicious message, email, offer or URL.</p>
+            </div>
+
+            <div class="pipeline-line">
+              <span></span>
+            </div>
+
+            <!-- STEP 2 -->
+
+            <div class="pipeline-step">
+              <div class="step-number">02</div>
+
+              <div class="step-icon-large">
+                <div class="icon-box scanning">◈</div>
+              </div>
+
+              <h3>Detect</h3>
+
+              <p>ScamLens checks for known scam and phishing patterns.</p>
+            </div>
+
+            <div class="pipeline-line">
+              <span></span>
+            </div>
+
+            <!-- STEP 3 -->
+
+            <div class="pipeline-step">
+              <div class="step-number">03</div>
+
+              <div class="step-icon-large">
+                <div class="icon-box result">✓</div>
+              </div>
+
+              <h3>Understand</h3>
+
+              <p>Receive a risk score and clear explanations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CTA
+        ================================================== -->
+
+      <section class="cta-section">
+        <div class="cta-glow"></div>
+
+        <div class="cta-content">
+          <div class="cta-icon">
+            <svg viewBox="0 0 100 100">
+              <path
+                d="M50 8
+                               L86 22
+                               V48
+                               C86 69 72 84 50 92
+                               C28 84 14 69 14 48
+                               V22 Z"
+              />
+
+              <path
+                d="M32 50
+                               L44 62
+                               L69 37"
+              />
+            </svg>
+          </div>
+
+          <span class="section-kicker"> STAY AHEAD OF THE THREAT </span>
+
+          <h2>
+            Think before
+            <span>you click.</span>
+          </h2>
+
+          <p>
+            When something feels suspicious, let ScamLens take a closer look.
+          </p>
+
+          <a href="#analyzer" class="btn-primary cta-button">
+            Analyze Something Suspicious
+
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- =========================================================
+     FAQ SECTION
+========================================================= -->
+
+<section class="faq-section">
+
+    <div class="faq-header">
+        <span class="section-label"></span>
+
+        <h1>Frequently Asked Questions</h1>
+
+        <p>
+            Everything you need to know about ScamLens.
+        </p>
+    </div>
+
+
+    <div class="faq-list">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    What is ScamLens?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    ScamLens is a scam detection tool that analyzes
+                    suspicious messages, emails, and URLs to identify
+                    common scam patterns and estimate their risk level.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    How does ScamLens detect scams?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    ScamLens checks the input for patterns commonly
+                    associated with scams, such as urgency, suspicious
+                    links, OTP requests, payment requests, fake rewards,
+                    account verification requests, and job-related fees.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    What do the risk levels mean?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Low Risk means few suspicious patterns were detected.
+                    Medium Risk means some potentially suspicious patterns
+                    were found. High Risk means multiple strong scam
+                    indicators were detected.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    Can ScamLens detect every scam?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    No. ScamLens is an analysis tool and may not detect
+                    new or highly sophisticated scams. Its results should
+                    be treated as a warning and not as a guarantee.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    What types of scams can ScamLens identify?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    ScamLens can identify patterns associated with
+                    Banking / Phishing, Job / Internship, Prize / Lottery,
+                    Account Takeover, Payment scams, and other suspicious
+                    activity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    Should I click a suspicious link to check it?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    No. If a link looks suspicious, avoid opening it just
+                    to test it. You can analyze the URL through ScamLens
+                    instead.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    What should I do if ScamLens detects a high-risk message?
+                </span>
+
+                <span class="faq-icon">+</span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Avoid clicking links, sharing OTPs or passwords,
+                    sending money, or providing personal information.
+                    Verify the request through the organization's official
+                    website or trusted contact channel.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUERY SECTION
+========================================================= -->
+
+<section class="query-section">
+
+    <div class="query-header">
+
+        <span class="section-label">
+            SECURE CHANNEL
+        </span>
+
+        <h2>Still Have Questions?</h2>
+
+        <p>
+            Can't find what you're looking for?
+            Send us your question and we'll get back to you.
+        </p>
+
+    </div>
+
+
+    <form class="query-form" id="queryForm">
+
+        <div class="query-fields">
+
+            <!-- NAME -->
+
+            <div class="query-field">
+
+                <label for="queryName">
+                    NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="queryName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="query-field">
+
+                <label for="queryEmail">
+                    EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="queryEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION -->
+
+        <div class="query-field">
+
+            <label for="queryQuestion">
+                YOUR QUESTION
+            </label>
+
+            <textarea
+                id="queryQuestion"
+                rows="5"
+                placeholder="Tell us what's on your mind..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="query-submit"
+        >
+
+            <span>SEND QUERY</span>
+
+            <span>→</span>
+
+        </button>
+
+
+        <!-- STATUS -->
+
+        <div
+            class="query-status"
+            id="queryStatus"
+        ></div>
+
+    </form>
+
+</section> 
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <div class="brand-symbol">
+              <svg viewBox="0 0 50 50">
+                <path
+                  d="M25 4
+                                   L43 11
+                                   V24
+                                   C43 35 36 42 25 46
+                                   C14 42 7 35 7 24
+                                   V11 Z"
+                />
+
+                <path
+                  d="M25 13
+                                   L34 17
+                                   V25
+                                   C34 30 30 34 25 36
+                                   C20 34 16 30 16 25
+                                   V17 Z"
+                />
+              </svg>
+            </div>
+
+            <div class="brand-name"><span>Scam</span>Lens</div>
+          </a>
+
+          <p>Security intelligence for everyday digital life.</p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <span>PRODUCT</span>
+
+            <a href="#analyzer"> Analyzer </a>
+
+            <a href="#dashboard"> Intelligence </a>
+
+            <a href="#how-it-works"> How it works </a>
+          </div>
+
+          <div>
+            <span>SECURITY</span>
+
+            <a href="#"> Privacy </a>
+
+            <a href="#"> Detection engine </a>
+
+            <a href="#"> Security </a>
+          </div>
+
+          <div>
+            <span>PROJECT</span>
+
+            <a href="#"> GitHub </a>
+
+            <a href="#"> Documentation </a>
+
+            <a href="#"> About ScamLens </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 ScamLens </span>
+
+        <span> Built for safer digital experiences. </span>
+
+        <span class="footer-status">
+          <span></span>
+
+          SYSTEM OPERATIONAL
+        </span>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+  <!-- SCAN DETAILS MODAL -->
+
+<div class="scan-modal" id="scanModal">
+
+    <div class="scan-modal-overlay"></div>
+
+    <div class="scan-modal-box">
+
+        <div class="scan-modal-header">
+
+            <div>
+                <span class="section-label">
+                    SCAN DETAILS
+                </span>
+
+                <h2>Analysis Report</h2>
+            </div>
+
+            <button
+                class="scan-modal-close"
+                id="scanModalClose"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="scan-modal-content">
+
+            <!-- Risk -->
+            <div class="scan-detail-risk">
+
+                <div>
+                    <span>RISK SCORE</span>
+                    <strong id="modalRiskScore">—</strong>
+                </div>
+
+                <div>
+                    <span>RISK LEVEL</span>
+                    <strong id="modalRiskLevel">—</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Category -->
+            <div class="scan-detail-row">
+
+                <span>SCAM CATEGORY</span>
+
+                <strong id="modalScamCategory">
+                    —
+                </strong>
+
+            </div>
+
+
+            <!-- Message Type -->
+            <div class="scan-detail-row">
+
+                <span>MESSAGE TYPE</span>
+
+                <strong id="modalMessageType">
+                    —
+                </strong>
+
+            </div>
+
+
+            <!-- Original Input -->
+            <div class="scan-detail-block">
+
+                <span>ORIGINAL INPUT</span>
+
+                <p id="modalInput">
+                    —
+                </p>
+
+            </div>
+
+
+            <!-- Detection Reasons -->
+            <div class="scan-detail-block">
+
+                <span>DETECTION REASONS</span>
+
+                <div
+                    class="modal-reasons"
+                    id="modalReasons"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <!-- Date -->
+            <div class="scan-detail-row">
+
+                <span>SCANNED AT</span>
+
+                <strong id="modalDate">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </body>
+</html>
