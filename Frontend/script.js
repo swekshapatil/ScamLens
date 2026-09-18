@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/scan"
+            "https://scamlens-backend-0w5v.onrender.com/api/scan"
         );
 
         if (!response.ok) {
@@ -811,7 +811,7 @@ document.addEventListener(
             
             // Send the result to our backend
             const response = await fetch(
-                "http://localhost:5000/api/scan",
+                "https://scamlens-backend-0w5v.onrender.com/api/scan",
                 {
                     method: "POST",
 
@@ -3924,7 +3924,7 @@ if (queryForm) {
 
                 const response =
                     await fetch(
-                        "http://localhost:5000/api/queries",
+                        "https://scamlens-backend-0w5v.onrender.com/api/queries",
                         {
                             method: "POST",
 
