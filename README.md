@@ -282,7 +282,7 @@ Scan data is stored in MongoDB and loaded through the backend API.
 
 A short demonstration of ScamLens showing the analyzer, risk assessment, scam category, AI analysis, and scan history.
 
-🎥 Project Demo: Watch the ScamLens Demo
+🎥 **Project Demo:** [Watch the ScamLens Demo](https://youtu.be/17hRGyH7gCI)
 
 ---
 
