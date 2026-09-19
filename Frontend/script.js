@@ -1314,22 +1314,41 @@ console.log("CATEGORY DEBUG:", {
  /* =================================================
    FEATURE 3A — SCAM CATEGORY DETECTION
 ================================================= */
-console.log("BANKING CHECK:", {
-
-    bank: lowerText.includes("bank"),
-
-    kyc: lowerText.includes("kyc"),
-
-    accountAccess: lowerText.includes("account access"),
-
-    verification: lowerText.includes("verification"),
-
-    restricted: lowerText.includes("restricted")
-
-});
-
 
 if (
+    (
+        lowerText.includes("job") ||
+        lowerText.includes("internship") ||
+        lowerText.includes("intern") ||
+        lowerText.includes("software internship") ||
+        lowerText.includes("work from home") ||
+        lowerText.includes("work-from-home") ||
+        lowerText.includes("career") ||
+        lowerText.includes("employment") ||
+        lowerText.includes("vacancy") ||
+        lowerText.includes("hiring") ||
+        lowerText.includes("recruitment") ||
+        lowerText.includes("stipend") ||
+        lowerText.includes("joining date")
+    )
+    &&
+    (
+        lowerText.includes("fee") ||
+        lowerText.includes("pay") ||
+        lowerText.includes("payment") ||
+        lowerText.includes("registration") ||
+        lowerText.includes("deposit") ||
+        lowerText.includes("guaranteed") ||
+        lowerText.includes("onboarding") ||
+        lowerText.includes("processing")
+    )
+) {
+
+    scamCategory = "Job / Internship Scam";
+
+}
+
+else if (
     (
         lowerText.includes("bank") ||
         lowerText.includes("banking") ||
@@ -1349,6 +1368,35 @@ if (
 ) {
 
     scamCategory = "Banking / Phishing Scam";
+
+}
+
+else if (
+    (
+        lowerText.includes("new login") ||
+        lowerText.includes("new sign-in") ||
+        lowerText.includes("sign-in attempt") ||
+        lowerText.includes("login attempt") ||
+        lowerText.includes("unfamiliar device") ||
+        lowerText.includes("unknown device") ||
+        lowerText.includes("unrecognized device") ||
+        lowerText.includes("device that isn't normally associated") ||
+        lowerText.includes("suspicious login") ||
+        lowerText.includes("unauthorized login") ||
+        lowerText.includes("unauthorized access")
+    )
+    &&
+    (
+        lowerText.includes("verify") ||
+        lowerText.includes("verification") ||
+        lowerText.includes("confirm") ||
+        lowerText.includes("secure") ||
+        lowerText.includes("account information") ||
+        lowerText.includes("prevent further access")
+    )
+) {
+
+    scamCategory = "Account Takeover / Phishing";
 
 }
 
@@ -1378,65 +1426,9 @@ else if (
         lowerText.includes("processing formalities")
     )
 ) {
+
     scamCategory = "Prize / Lottery Scam";
-}
 
-else if (
-    (
-        lowerText.includes("job") ||
-        lowerText.includes("internship") ||
-        lowerText.includes("intern") ||
-        lowerText.includes("software internship") ||
-        lowerText.includes("work from home") ||
-        lowerText.includes("work-from-home") ||
-        lowerText.includes("career") ||
-        lowerText.includes("employment") ||
-        lowerText.includes("vacancy") ||
-        lowerText.includes("hiring") ||
-        lowerText.includes("recruitment") ||
-        lowerText.includes("stipend") ||
-        lowerText.includes("joining date")
-    )
-    &&
-    (
-        lowerText.includes("fee") ||
-        lowerText.includes("pay") ||
-        lowerText.includes("payment") ||
-        lowerText.includes("registration") ||
-        lowerText.includes("deposit") ||
-        lowerText.includes("guaranteed") ||
-        lowerText.includes("onboarding") ||
-        lowerText.includes("processing")
-    )
-) {
-    scamCategory = "Job / Internship Scam";
-}
-
-else if (
-    (
-        lowerText.includes("new login") ||
-        lowerText.includes("new sign-in") ||
-        lowerText.includes("sign-in attempt") ||
-        lowerText.includes("login attempt") ||
-        lowerText.includes("unfamiliar device") ||
-        lowerText.includes("unknown device") ||
-        lowerText.includes("unrecognized device") ||
-        lowerText.includes("device that isn't normally associated") ||
-        lowerText.includes("suspicious login") ||
-        lowerText.includes("unauthorized login") ||
-        lowerText.includes("unauthorized access")
-    )
-    &&
-    (
-        lowerText.includes("verify") ||
-        lowerText.includes("verification") ||
-        lowerText.includes("confirm") ||
-        lowerText.includes("secure") ||
-        lowerText.includes("account information") ||
-        lowerText.includes("prevent further access")
-    )
-) {
-    scamCategory = "Account Takeover / Phishing";
 }
 
 else if (
@@ -1457,6 +1449,7 @@ else if (
         lowerText.includes("refund")
     )
 ) {
+
     scamCategory = "Payment Scam";
 }
 
