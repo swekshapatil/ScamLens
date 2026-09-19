@@ -54,18 +54,27 @@ router.post("/", async (req, res) => {
             });
         }
 
+const aiAnalysis = await analyzeWithAI(input);
 
-        const aiAnalysis = await analyzeWithAI(input);
+let aiCategory = scamCategory;
 
+if (aiAnalysis) {
+    const categoryMatch =
+        aiAnalysis.match(/CATEGORY:\s*(.+)/i);
 
-        const newScan = new Scan({
-            input,
-            riskScore,
-            riskLevel,
-            messageType,
-            scamCategory,
-            reasons
-        });
+    if (categoryMatch) {
+        aiCategory = categoryMatch[1].trim();
+    }
+}
+
+const newScan = new Scan({
+    input,
+    riskScore,
+    riskLevel,
+    messageType,
+    scamCategory: aiCategory,
+    reasons
+});
 
 
         const savedScan = await newScan.save();

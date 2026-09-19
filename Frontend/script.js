@@ -836,9 +836,14 @@ document.addEventListener(
                 throw new Error("Failed to save scan");
             }
 
-            const data = await response.json();
+   const data = await response.json();
 
 analysis.aiAnalysis = data.aiAnalysis;
+
+if (data.scan && data.scan.scamCategory) {
+    analysis.scamCategory =
+        data.scan.scamCategory;
+}
 
 displayResult(analysis);
 
@@ -2077,7 +2082,8 @@ const detectionHTML =
             </div>
         `;
 
-        /* AI ANALYSIS */
+       
+/* AI ANALYSIS */
 
 if (aiAnalysis) {
 
@@ -2087,16 +2093,24 @@ if (aiAnalysis) {
     const reasonMatch =
         aiAnalysis.match(/REASON:\s*(.+)/i);
 
-
     document.getElementById("aiVerdict").textContent =
         verdictMatch
             ? verdictMatch[1].trim()
-            : "—";
+            : "AI analysis unavailable";
 
     document.getElementById("aiReason").textContent =
         reasonMatch
             ? reasonMatch[1].trim()
-            : "—";
+            : "Gemini AI is temporarily unavailable.";
+
+} else {
+
+    document.getElementById("aiVerdict").textContent =
+        "AI temporarily unavailable";
+
+    document.getElementById("aiReason").textContent =
+        "The scan was completed using ScamLens's rule-based detection engine.";
+
 }
 
         addResultStyles();
